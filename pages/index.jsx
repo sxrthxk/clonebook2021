@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header */}
       <Header />
 
-      <main className="flex justify-between bg-gray-100">
+      <main className="flex justify-between ">
         <Sidebar/>
         <Feed />
         <Groups/>
