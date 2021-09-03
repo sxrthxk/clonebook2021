@@ -15,7 +15,7 @@ const InputBox = () => {
     <div className="w-full m-3 bg-white p-3 rounded-2xl">
       <form onSubmit={formHandler} encType="multipart/form-data">
         <div className="flex my-2">
-        <Image className="rounded-full" src={avi} height={40} width={40} />
+        <Image className="rounded-full" src={avi} height={40} width={40} alt="No Avatar Image"/>
         <input type="text" className="placeholder-gray-500 ml-2 px-3 py-2 w-5/6 rounded-full focus:outline-none" placeholder={`What's on your mind, ${currUser}?`} />
         </div>
         <hr/>
