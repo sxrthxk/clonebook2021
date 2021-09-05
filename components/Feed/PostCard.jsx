@@ -16,17 +16,20 @@ const PostCard = ({ author, avi, postImage, content, feeling }) => {
   };
 
   return (
-    <div className="w-full my-3 bg-white p-3 rounded-2xl">
+    <div className="w-full my-3 text-sm sm:text-md bg-white p-3 rounded-2xl">
       {/* START POST HEADER */}
       <div className="flex justify-between items-center">
-        <div className="flex items-start">
+        <div className="flex justify-between items-start">
+          <div className="w-10 h-10 relative">
           <Image
             src={avi}
-            width={40}
-            height={40}
+            layout="fixed"
+            width="40"
+            height="40"
             alt="Profile Photo"
             className="rounded-full"
           ></Image>
+          </div>
           <div className="flex flex-col pl-3">
             <div className="inline">
               <strong className="font-semibold">{author} </strong>
