@@ -15,7 +15,7 @@ export default function Home() {
       {/* Header */}
       <Header />
 
-      <main className="flex space-between xl:justify-between relative">
+      <main className="flex space-evenly xl:justify-between relative">
         <Sidebar/>
         <Feed />
         <Groups/>

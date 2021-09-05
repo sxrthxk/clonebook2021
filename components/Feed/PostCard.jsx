@@ -16,10 +16,10 @@ const PostCard = ({ author, avi, postImage, content, feeling }) => {
   };
 
   return (
-    <div className="w-full m-3 bg-white p-3 rounded-2xl">
+    <div className="w-full my-3 bg-white p-3 rounded-2xl">
       {/* START POST HEADER */}
       <div className="flex justify-between items-center">
-        <div className="flex">
+        <div className="flex items-start">
           <Image
             src={avi}
             width={40}
@@ -28,10 +28,10 @@ const PostCard = ({ author, avi, postImage, content, feeling }) => {
             className="rounded-full"
           ></Image>
           <div className="flex flex-col pl-3">
-            <div className="inline-flex">
-              <h2 className="font-semibold">{author} </h2>
+            <div className="inline">
+              <strong className="font-semibold">{author} </strong>
               {feeling && (
-                <span className="whitespace-pre"> is feeling {feeling}.</span>
+                <span> is feeling {feeling}.</span>
               )}
             </div>
             <p className="text-sm text-gray-500">16m</p>
@@ -63,15 +63,15 @@ const PostCard = ({ author, avi, postImage, content, feeling }) => {
       <div className="flex justify-between items-center mt-2">
         <div className="flex items-center justify-between hover:bg-gray-200 py-1 px-2 rounded-lg transition-all cursor-pointer">
           <FiThumbsUp className="h-4 px-2 w-auto" />
-          Like
+          <span className="hidden sm:inline">Like</span>
         </div>
         <div className="flex items-center justify-between hover:bg-gray-200 py-1 px-2 rounded-lg transition-all cursor-pointer">
           <FaRegCommentAlt className="h-4 px-2 w-auto" />
-          Comment
+          <span className="hidden sm:inline">Comment</span>
         </div>
         <div className="flex items-center justify-between hover:bg-gray-200 py-1 px-2 rounded-lg transition-all cursor-pointer">
           <TiArrowForwardOutline className="h-4 px-2 w-auto" />
-          Share
+          <span className="hidden sm:inline">Share</span>
         </div>
       </div>
       {/* </div> */}

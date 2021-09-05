@@ -12,25 +12,25 @@ const InputBox = () => {
     console.log(data);
   };
   return (
-    <div className="w-full m-3 bg-white p-3 rounded-2xl">
+    <div className="w-full my-3 bg-white p-3 rounded-2xl">
       <form onSubmit={formHandler} encType="multipart/form-data">
         <div className="flex my-2">
         <Image className="rounded-full" src={avi} height={40} width={40} alt="No Avatar Image"/>
         <input type="text" className="placeholder-gray-500 ml-2 px-3 py-2 w-5/6 rounded-full focus:outline-none" placeholder={`What's on your mind, ${currUser}?`} />
         </div>
         <hr/>
-        <div className="flex justify-between items-center mt-3">
-          <div className="flex items-stretch justify-between hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
-            <FaVideo className="fill-current text-red-500 h-6 px-2 w-auto" />
+        <div className="flex justify-evenly sm:justify-between items-center mt-3">
+          <div className="flex items-center justify-between hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
+            <FaVideo className="fill-current text-red-500 h-5 sm:h-6 px-2 w-auto" />
             Live Video
           </div>
-          <div className="flex items-stretch justify-between hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
-            <FaImage className="fill-current text-green-500 h-6 px-2 w-auto" />
+          <div className="flex items-center justify-between hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
+            <FaImage className="fill-current text-green-500 h-5 sm:h-6 px-2 w-auto" />
             Photo/Video
           </div>
-          <div className="flex items-stretch justify-between hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
+          <div className="hidden sm:flex items-center hover:bg-gray-300 p-2 rounded-full transition-all cursor-pointer">
             <FaGrin className="fill-current text-yellow-300 h-6 px-2 w-auto" />
-            Live Video
+            Feeling/Activity
           </div>
         </div>
       </form>
